@@ -1,0 +1,105 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{alltt}
+\usepackage{verbatim}
+\usepackage{fancyheadings}
+\usepackage[latin1]{inputenc}
+\usepackage{epsfig}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{vmargin}
+\usepackage{graphics}
+\usepackage[hang,small,bf]{caption}
+
+\def\TestLength{\\
+  \framebox[\voffset]{$\strut$\hfill}\ voffset\\
+  \framebox[\hoffset]{$\strut$\hfill}\ hoffset\\
+  \framebox[\evensidemargin]{$\strut$\hfill}\ evensidemargin\\
+  \framebox[\oddsidemargin]{$\strut$\hfill}\ oddsidemargin\\
+  \framebox[\topmargin]{$\strut$\hfill}\ topmargin\\
+  \framebox[\headheight]{$\strut$\hfill}\ headheight\\
+  \framebox[\headsep]{$\strut$\hfill}\ headheight\\
+  \framebox[\topskip]{$\strut$\hfill}\ topskip\\
+  \framebox[\footskip]{$\strut$\hfill}\ footskip\\
+  \framebox[\footheight]{$\strut$\hfill}\ footheight\\
+}
+
+% -----------------------------------------------
+% H O R I S O N T A L   A D J U S T M E N T
+% -----------------------------------------------
+\setlength{\hoffset}{-2.7cm}  % Calibration for personal HP Laserjet4
+\setlength{\oddsidemargin}{3.5cm}
+\setlength{\textwidth}{14.5cm}
+
+% -----------------------------------------------
+% V E R T I C A L   A D J U S T M E N T
+% -----------------------------------------------
+\setlength{\voffset}{-2.7cm}  % Calibration for personal HP Laserjet4
+\setlength{\topmargin}{3cm}
+\setlength{\headsep}{.8cm}
+\setlength{\footskip}{1.5cm}
+\setlength{\textheight}{21.5cm}
+
+\renewcommand{\sectionmark}[1]%
+                {\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+      {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+      {\fancyplain{}{\bfseries\thepage}}
+
+\pagestyle{fancyplain}
+\renewcommand{\descriptionlabel}[1]%
+   {\hspace{\labelsep}\textsf{#1}}
+
+\renewcommand{\contentsname}{Indhold}
+\renewcommand{\appendixname}{Appendiks}
+\renewcommand{\tablename}{Tabel}
+\renewcommand{\figurename}{Figur}
+
+% Indsæt forfatternavn
+\author{Tommy Petersen \\
+  AIA \\
+  Denmark \\
+  \texttt{tp@aia.dk} \\
+  Copyright 2020 AIA \\
+  All rights reserved}
+
+\date{}
+
+% Indsæt dokumentets titel
+\title{dax}
+
+\begin{document}
+
+% Generer titel
+\maketitle
+
+% -----------------------------------------------
+% S E L V E   D O K U M E N T E T
+% -----------------------------------------------
+
+% Declarations:
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{algorithm}{Algorithm}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+
+\include{daxText}
+
+\end{document}
