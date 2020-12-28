@@ -15,8 +15,6 @@
 # TeX / XFig:
 *.pstex*
 *.aux
-*.tex
-*.fig
 *.eps
 Articles/Paradigm/Fig/xfigNotes.txt
 
